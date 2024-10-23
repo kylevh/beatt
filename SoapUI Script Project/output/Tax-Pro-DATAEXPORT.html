@@ -1,0 +1,112 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Tax-Pro Backend Tracker</title>
+            <style>
+                body { font-family: Arial, sans-serif; }
+                table { border-collapse: collapse; width: 100%; }
+                th, td { border: 1px solid #ddd; padding: 8px; }
+                th { background-color: #f2f2f2; }
+                .suite-row { font-weight: bold; background-color: #FFFF00; text-align: center; }
+            </style>
+        </head>
+        <body>
+            <h1>Tax-Pro Backend Automation Test Coverage</h1>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>DEV Coverage</th>
+                    <th>SAT Coverage</th>
+                    <th>Functional Coverage</th>
+                    <th>API</th>
+                    <th>Functionality</th>
+                    <th>Method</th>
+                    <th>Scenario</th>
+                    <th>Data Methods</th>
+                    <th>Notes</th>
+                </tr>
+    
+<tr><td colspan='10' class='suite-row'>DEV SUITE</td></tr>
+
+        <tr>
+            <td>1</td>
+            <td>n</td>
+            <td></td>
+            <td></td>
+            <td>/{user}</td>
+            <td>TestCase 1</td>
+            <td>GET</td>
+            <td>User request</td>
+            <td>Request Params, Header Params</td>
+            <td>XPathContainsAssertion: FAILED
+SimpleContainsAssertion: FAILED
+ValidHttpStatusCodesAssertion: PASSED
+InvalidHttpStatusCodesAssertion: PASSED</td>
+        </tr>
+    
+
+        <tr>
+            <td>2</td>
+            <td>n</td>
+            <td></td>
+            <td></td>
+            <td>/me</td>
+            <td>TestCase 1</td>
+            <td>GET</td>
+            <td>Me Request</td>
+            <td>Request Params</td>
+            <td>XPathContainsAssertion: FAILED</td>
+        </tr>
+    
+
+        <tr>
+            <td>3</td>
+            <td>n</td>
+            <td></td>
+            <td></td>
+            <td>/{user}/feed</td>
+            <td>TestCase 1</td>
+            <td>GET</td>
+            <td>User Feed</td>
+            <td>Request Params</td>
+            <td>XPathContainsAssertion: FAILED
+InvalidHttpStatusCodesAssertion: PASSED
+SimpleContainsAssertion: FAILED
+SimpleContainsAssertion: UNKNOWN</td>
+        </tr>
+    
+
+        <tr>
+            <td>4</td>
+            <td>n</td>
+            <td></td>
+            <td></td>
+            <td>/taxStuff</td>
+            <td>SPECIAL Test case</td>
+            <td>POST</td>
+            <td>REST Request</td>
+            <td>Request Body (JSON), Request Params</td>
+            <td>SimpleContainsAssertion: FAILED</td>
+        </tr>
+    
+
+        <tr>
+            <td>5</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>/taxStuff</td>
+            <td>SPECIAL Test case</td>
+            <td>POST</td>
+            <td>Copy of REST Request</td>
+            <td>Request Body (JSON), Request Params</td>
+            <td></td>
+        </tr>
+    
+
+            </table>
+        </body>
+        </html>
+    

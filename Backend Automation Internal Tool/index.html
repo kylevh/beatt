@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="sl-theme-dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Automation Internal Testing Tool</title>
+    <!-- Animate.css -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <!-- Tailwind -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swup Page Transition -->
+    <!-- <script src="https://unpkg.com/swup@4"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/themes/light.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/themes/dark.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.17.1/cdn/shoelace.js"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/root.css" />
+</head>
+
+<body class="screen">
+    <nav class="navbar">
+        <div class="navbar__logo-container">
+            <i class="fa-solid fa-trash-can"></i>
+            <h2 class="navbar__title">Backend Automation Team Internal Tool</h2>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu-item"><a href="#" class="navbar__menu-item-link" data-page="dashboard"><i
+                        class="fa-solid fa-house"></i>Dashboard</a></li>
+            <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-item-link" data-page="projects"><i
+                        class="fa-solid fa-folder-open"></i>Projects</a>
+            </li>
+            <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-item-link" data-page="analytics"><i
+                        class="fa-solid fa-chart-line"></i>Analytics</a>
+            </li>
+            <li class="navbar__menu-item">
+                <a href="#" class="navbar__menu-item-link" data-page="settings"><i
+                        class="fa-solid fa-gear"></i>Settings</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="right-side-content">
+        <div class="header">
+            <!-- <h1 class="header__title" id="header-title">Dashboard</h1> -->
+            <sl-dropdown class="header__dropdown">
+                <sl-button slot="trigger" caret>Select Project</sl-button>
+                <sl-menu>
+                    <sl-menu-item>Tax-Pro</sl-menu-item>
+                    <sl-divider></sl-divider>
+                    <sl-menu-item>Audit</sl-menu-item>
+                    <sl-menu-item>Baldue-Summary</sl-menu-item>
+                    <sl-menu-item>Chatbot</sl-menu-item>
+
+                </sl-menu>
+            </sl-dropdown>
+
+        </div>
+
+
+        <section id="dashboard" class="page page--dashboard">
+            <div class="grid-container">
+                <div class="grid-item" style="grid-column: 1 / span 4;">Hello
+                    <h2>Hello</h2>
+                    <sl-button>Click me</sl-button>
+                    <div style="display: flex; align-items: center; height: 2rem;">
+                        First
+                        <sl-divider vertical></sl-divider>
+                        Middle
+                        <sl-divider vertical></sl-divider>
+                        Last
+                    </div>
+                    <div class="min-h-[300px]">s</div>
+                </div>
+                <div class="grid-item" style="grid-column: 5 / span 2;">ds</div>
+                <div class="grid-item" style="grid-column: 1 / span 4;">Hello</div>
+            </div>
+        </section>
+
+        <section id="analytics" class="page page--analytics">
+            <div class="grid-container">
+                <div class="grid-item" style="grid-column: 1 / span 4;">Hello
+                    <h2>Hello</h2>
+                    <sl-button>Click me</sl-button>
+                    <div style="display: flex; align-items: center; height: 2rem;">
+                        First
+                        <sl-divider vertical></sl-divider>
+                        Middle
+                        <sl-divider vertical></sl-divider>
+                        Last
+                    </div>
+                    <div class="min-h-[300px]">s</div>
+                </div>
+                <div class="grid-item" style="grid-column: 5 / span 2;">ds</div>
+                <div class="grid-item" style="grid-column: 1 / span 4;">Hello</div>
+
+            </div>
+        </section>
+
+
+    </div>
+</body>
+
+</html>
