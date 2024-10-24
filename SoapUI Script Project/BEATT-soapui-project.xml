@@ -204,8 +204,10 @@ UISupport.showInfoMessage("Script ran succesffully with no errors i think", "Tas
 import com.eviware.soapui.support.UISupport
 
 def outputFolder = new File(context.testCase.testSuite.project.path).getParentFile()
-outputFolder = new File(outputFolder, 'output')
-initializeFolder(outputFolder, true)
+outputFolder = new File(outputFolder, 'snapshots')
+
+def dateFolder = new File(outputFolder, new Date().format('yyyy-MM-dd'))
+initializeFolder(dateFolder, false)
 
 def main(outputFolder) {
     processProjects(outputFolder)
@@ -215,7 +217,9 @@ def initializeFolder(File folder, Boolean clear = false) {
     if (folder.exists()) {
         if (clear) {
             folder.eachFile { file ->
-                if (file.isDirectory()) clearFolder(file)
+                if(file.isDirectory()) {
+                    clearFolder(file)
+                }
                 file.delete()
             }
             log.info("Cleared folder: ${folder.getName()}")
@@ -281,8 +285,18 @@ def processProjects(outputFolder) {
             projectData.testSuites << suiteData
         }
 
+        def timestamp = new Date().format('yyyy-MM-dd_HH-mm')
         def jsonOutput = JsonOutput.prettyPrint(JsonOutput.toJson(projectData))
-        def outputFilePath = "${outputFolder}/${project.name}.json"
+
+
+        def dateFolder = new File(outputFolder, new Date().format('yyyy-MM-dd')) // Create date folder
+        dateFolder.mkdirs() // Ensure the date folder exists
+
+        def projectFolder = new File(dateFolder, project.name) // Create project folder within the date folder
+        projectFolder.mkdirs() // Ensure the project folder exists
+
+        def outputFilePath = "${projectFolder}/${project.name}_${timestamp}.json" // Update the output file path
+        
         new File(outputFilePath).text = jsonOutput
         log.info("JSON export written to: ${outputFilePath}")
     }
@@ -313,4 +327,27 @@ def getAssertions(testStep) {
 }
 
 main(outputFolder)
-]]></script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+]]></script></con:config></con:testStep><con:testStep type="groovy" name="Test" id="9adc7923-a2bf-4633-a14b-989a65486d09"><con:settings/><con:config><script>// Test Write Permissions Script
+def testFolderPath = "path/to/your/test/folder" // Change this to your target folder
+def testFileName = "test_write_permission.txt"
+
+def testFolder = new File(testFolderPath)
+def testFile = new File(testFolder, testFileName)
+
+try {
+    // Attempt to create the test folder if it doesn't exist
+    if (!testFolder.exists()) {
+        testFolder.mkdirs()
+        println "Created folder: ${testFolder.getAbsolutePath()}"
+    }
+
+    // Attempt to write to the test file
+    testFile.text = "This is a test file to check write permissions."
+    println "Successfully wrote to: ${testFile.getAbsolutePath()}"
+
+    // Clean up by deleting the test file
+    testFile.delete()
+    println "Deleted test file: ${testFile.getAbsolutePath()}"
+} catch (Exception e) {
+    println "Failed to write to the folder. Error: ${e.message}"
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

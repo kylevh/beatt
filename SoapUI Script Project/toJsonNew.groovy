@@ -2,8 +2,10 @@ import groovy.json.JsonOutput
 import com.eviware.soapui.support.UISupport
 
 def outputFolder = new File(context.testCase.testSuite.project.path).getParentFile()
-outputFolder = new File(outputFolder, 'output')
-initializeFolder(outputFolder, true)
+outputFolder = new File(outputFolder, 'snapshots')
+
+def dateFolder = new File(outputFolder, new Date().format('yyyy-MM-dd'))
+initializeFolder(dateFolder, false)
 
 def main(outputFolder) {
     processProjects(outputFolder)
@@ -13,7 +15,9 @@ def initializeFolder(File folder, Boolean clear = false) {
     if (folder.exists()) {
         if (clear) {
             folder.eachFile { file ->
-                if (file.isDirectory()) clearFolder(file)
+                if(file.isDirectory()) {
+                    clearFolder(file)
+                }
                 file.delete()
             }
             log.info("Cleared folder: ${folder.getName()}")
@@ -79,8 +83,18 @@ def processProjects(outputFolder) {
             projectData.testSuites << suiteData
         }
 
+        def timestamp = new Date().format('yyyy-MM-dd_HH-mm')
         def jsonOutput = JsonOutput.prettyPrint(JsonOutput.toJson(projectData))
-        def outputFilePath = "${outputFolder}/${project.name}.json"
+
+
+        def dateFolder = new File(outputFolder, new Date().format('yyyy-MM-dd')) // Create date folder
+        dateFolder.mkdirs() // Ensure the date folder exists
+
+        def projectFolder = new File(dateFolder, project.name) // Create project folder within the date folder
+        projectFolder.mkdirs() // Ensure the project folder exists
+
+        def outputFilePath = "${projectFolder}/${project.name}_${timestamp}.json" // Update the output file path
+        
         new File(outputFilePath).text = jsonOutput
         log.info("JSON export written to: ${outputFilePath}")
     }

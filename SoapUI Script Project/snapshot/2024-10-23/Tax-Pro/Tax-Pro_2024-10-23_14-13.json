@@ -1,0 +1,160 @@
+{
+    "projectName": "Tax-Pro",
+    "testSuites": [
+        {
+            "testSuiteName": "DEV",
+            "testCases": [
+                {
+                    "testCaseName": "TestCase 1",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "User request",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "Me Request",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "User Feed",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "testStepData",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                },
+                {
+                    "testCaseName": "SPECIAL Test case",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "REST Request",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "Copy of REST Request",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
