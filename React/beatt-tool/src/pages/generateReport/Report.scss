@@ -1,0 +1,84 @@
+.report-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .report-container__select-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        select {
+            width: 7rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background-color: white;
+            border: 2px solid var(--color-primary-blue);
+            color: var(--color-primary-blue);
+            margin-bottom: .5rem;
+            font-size: var(--font-size-medium);
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding-left: 1rem;
+            &:focus {
+                outline: none;
+                border-color: var(--color-primary-blue);
+            }
+
+            &:hover {
+            }
+            
+        }
+    }
+
+    button {
+        width: 10rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        border: 2px solid var(--color-primary-blue);
+        color: var(--color-primary-blue);
+        margin-bottom: .5rem;
+        font-size: var(--font-size-medium);
+        cursor: pointer;
+        transition: all 0.15s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-right: .5rem;
+            object-fit: contain;
+            fill: var(--color-primary-blue);
+
+            path {
+                fill: var(--color-primary-blue);
+            }
+        }
+
+        &:hover {
+            background-color: var(--color-primary-blue);
+            color: white;
+
+            svg {
+                path {
+                    fill: white;
+                }
+            }
+        }
+    }
+}

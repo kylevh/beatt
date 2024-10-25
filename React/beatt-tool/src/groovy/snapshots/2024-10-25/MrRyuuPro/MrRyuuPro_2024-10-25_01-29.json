@@ -1,0 +1,183 @@
+{
+    "projectName": "MrRyuuPro",
+    "testSuites": [
+        {
+            "testSuiteName": "KyleDev",
+            "testCases": [
+                {
+                    "testCaseName": "KyleAuth",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "KyleStep",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                },
+                {
+                    "testCaseName": "KyleBalDue",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "Kyle-Baldue-A",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "Kyle-Baldue-B",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "testSuiteName": "PWAS_KYLE",
+            "testCases": [
+                {
+                    "testCaseName": "KyleAuth",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "KyleStep",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                },
+                {
+                    "testCaseName": "KyleBalDue",
+                    "executionTime": "0",
+                    "startTime": "0",
+                    "endTime": "0",
+                    "status": "unknown",
+                    "testSteps": [
+                        {
+                            "testStepName": "Kyle-Baldue-A",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        },
+                        {
+                            "testStepName": "Kyle-Baldue-B",
+                            "method": "GET",
+                            "url": "http://example.com",
+                            "pathParams": {
+                                
+                            },
+                            "queryParams": {
+                                
+                            },
+                            "headers": {
+                                
+                            },
+                            "requestBody": {
+                                
+                            },
+                            "assertions": "test",
+                            "status": "unknown",
+                            "executionTime": "0",
+                            "startTime": "0",
+                            "endTime": "0"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

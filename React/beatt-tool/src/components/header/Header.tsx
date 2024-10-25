@@ -9,7 +9,7 @@ export const Header = () => {
                 <div className="header__left">
                     <div className="header__logo">
                         <img src={logo} alt="logo" />
-                        <h1>BEATT IT</h1>
+                        <h1>BEATT</h1>
                     </div>
                     <input type="text" placeholder="Search..." className="header__search" />
                 </div>

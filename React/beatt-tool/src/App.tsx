@@ -3,10 +3,11 @@ import './App.scss'
 import { Header } from "./components/header/Header";
 import { Navbar } from "./components/navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
-import React, { Suspense, lazy } from "react";
+import  { Suspense, lazy } from "react";
 
 const TaxPro = lazy(() => import("./pages/taxpro/TaxPro"));
 const Home = lazy(() => import("./pages/home/Home"));
+const Report = lazy(() => import("./pages/generateReport/Report"));
 
 // const Loading = () => {
 //   return (
@@ -25,6 +26,7 @@ const AnimatedRoutes = () => {
         <Route path="/analytics" element={<div className="page">Analytics</div>} />
         <Route path="/taxpro" element={<TaxPro />} />
         <Route path="/iola" element={<div className="page">IOLA</div>} />
+        <Route path="/report" element={<Report />} />
       </Routes>
     </AnimatePresence>
   )

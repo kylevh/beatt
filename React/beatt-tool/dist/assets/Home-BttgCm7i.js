@@ -1,0 +1,1 @@
+import{j as r}from"./index-C13PCKXp.js";import{G as t}from"./GridItem-BUd0pvCt.js";const a=()=>r.jsx(r.Fragment,{children:r.jsx(t,{colStart:1,colSpan:1,rowStart:1,rowSpan:1,children:r.jsx("h1",{children:"Home"})})});export{a as default};

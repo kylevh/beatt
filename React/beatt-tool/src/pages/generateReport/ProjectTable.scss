@@ -1,0 +1,52 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 50px; /* Fixed height for each row */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Show ellipsis for overflowing text */
+    white-space: nowrap; /* Allow text to wrap */
+    max-width: 200px; /* Set a maximum width for cells */
+}
+
+.table th {
+    background-color: rgb(216, 216, 216);
+    border: 1px solid #000000;
+    color: black;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tr:hover {
+    background-color: #e0e0e0;
+}
+
+.table .full-width-header {
+    text-align: center;
+    font-weight: bold;
+    background-color: #ffeb3b; /* Bright yellow for test suite name rows */
+    color: #333; /* Optional: Change text color for better contrast */
+}
+
+.table td.highlight-green {
+    background-color: green; /* Highlight for 'Yes' */
+}
+
+.table td.highlight-red {
+    background-color: red; /* Highlight for 'No' */
+}
+
+.table td.highlight-orange {
+    background-color: orange; /* Highlight for 'Disabled' */
+}
