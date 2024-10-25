@@ -74,21 +74,23 @@ def createProjectData(project) {
 }
 
 def createTestSuiteData(testSuite, projectData) {
-    def suiteData = [
+    if (testSuite.name in ['DEV', 'SAT']) {
+        def suiteData = [
         testSuiteName: testSuite.name,
         disabled: testSuite.isDisabled(),
         status: 'unknown',
         testCases: []
     ]
 
-    // Loop through all test cases in the current test suite
-    testSuite.getTestCaseList().each { testCase ->
-        def testCaseData = createTestCaseData(testCase, projectData, suiteData)
-        projectData.totalTestCases++
-        suiteData.testCases << testCaseData
-    }
+        // Loop through all test cases in the current test suite
+        testSuite.getTestCaseList().each { testCase ->
+            def testCaseData = createTestCaseData(testCase, projectData, suiteData)
+            projectData.totalTestCases++
+            suiteData.testCases << testCaseData
+        }
 
-    return suiteData
+        return suiteData
+    }
 }
 
 def createTestCaseData(testCase, projectData, suiteData) {

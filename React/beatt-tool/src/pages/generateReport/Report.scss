@@ -34,20 +34,23 @@
                 outline: none;
                 border-color: var(--color-primary-blue);
             }
-
+            
             &:hover {
             }
             
         }
+
+        .report-container__select-container__date-select {
+            width: 9rem;
+        }
     }
 
     button {
-        width: 10rem;
+        width: 8rem;
         height: 2.5rem;
         border-radius: 0.5rem;
-        background-color: white;
-        border: 2px solid var(--color-primary-blue);
-        color: var(--color-primary-blue);
+        background-color: var(--color-primary-blue);
+        color: white;
         margin-bottom: .5rem;
         font-size: var(--font-size-medium);
         cursor: pointer;
@@ -63,15 +66,15 @@
             height: 1rem;
             margin-right: .5rem;
             object-fit: contain;
-            fill: var(--color-primary-blue);
+            fill: white;
 
             path {
-                fill: var(--color-primary-blue);
+                fill: white;
             }
         }
 
         &:hover {
-            background-color: var(--color-primary-blue);
+            background-color: #004dc9;
             color: white;
 
             svg {
