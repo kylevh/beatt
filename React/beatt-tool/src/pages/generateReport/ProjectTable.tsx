@@ -1,12 +1,10 @@
 import { ProjectData, RowData } from 'src/types/types';
 import React from 'react';
 import './ProjectTable.scss';
-import { exportToExcel } from './excelExport';
 export const ProjectTable = ({ data }: { data: ProjectData }) => {
     let cumulativeTestSteps = 0;
     return (
         <div className="table-container">
-            <button onClick={() => exportToExcel(data)}>Export to Excel</button>
             <table className="table">
                 <thead>
                     <tr>
@@ -35,12 +33,14 @@ export const ProjectTable = ({ data }: { data: ProjectData }) => {
                                     cumulativeTestSteps++;
                                     const isDevSuite = suite.testSuiteName === 'DEV';
                                     const isSatSuite = suite.testSuiteName === 'SAT';
+                                    console.log(step.disabled)
 
-                                    const coverageDev = isDevSuite ? (step.statusCode === 'FAILED' ? 'No' : (step.disabled ? 'Disabled' : 'Yes')) : '';
-                                    const coverageSat = isSatSuite ? (step.statusCode === 'FAILED' ? 'No' : (step.disabled ? 'Disabled' : 'Yes')) : '';
+                                    const coverageDev = isDevSuite ? (step.disabled ? 'Disabled' : (step.statusCode === 'FAILED' ? 'No' : 'Yes')) : '';
+                                    const coverageSat = isSatSuite ? (step.disabled ? 'Disabled' : (step.statusCode === 'FAILED' ? 'No' : 'Yes')) : '';
 
-                                    const finalCoverageDev = (coverageDev === 'Yes' && coverageSat === '') ? 'Yes' : (coverageDev === 'No' ? 'No' : '');
-                                    const finalCoverageSat = (coverageSat === 'Yes' && coverageDev === '') ? 'Yes' : (coverageSat === 'No' ? 'No' : '');
+                                    // Update logic to ensure only one can be 'Disabled'
+                                    const finalCoverageDev = isDevSuite ? (step.disabled ? 'Disabled' : coverageDev) : '';
+                                    const finalCoverageSat = isSatSuite ? (step.disabled ? 'Disabled' : coverageSat) : '';
 
                                     const dataMethod = step.requestBody ? 'JSON Body' : step.queryParams ? 'Query Params' : step.pathParams ? 'Request Params' : '';
                                     return {

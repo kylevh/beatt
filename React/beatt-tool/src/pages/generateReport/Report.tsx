@@ -35,8 +35,8 @@ const Report = () => {
                         "status": "unknown",
                         "testSteps": [
                             {
-                                "testStepName": "User request",
-                                "disabled": false,
+                                "testStepName": "KYLE request",
+                                "disabled": true,
                                 "method": "GET",
                                 "endpoint": "https://graph.facebook.com",
                                 "resource": "/{user}",
@@ -71,7 +71,7 @@ const Report = () => {
                             },
                             {
                                 "testStepName": "Me Request",
-                                "disabled": false,
+                                "disabled": true,
                                 "method": "GET",
                                 "endpoint": "https://graph.facebook.com",
                                 "resource": "/me",
